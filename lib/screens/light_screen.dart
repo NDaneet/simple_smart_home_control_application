@@ -21,7 +21,7 @@ class _LightScreenState extends State<LightScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const ImageContainer(imageProvider: AssetImage("assets/light_image.jpeg"),),
+          const ImageContainer(imageProvider: AssetImage("assests/light_image.jpeg"),),
           const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

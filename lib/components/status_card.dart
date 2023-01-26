@@ -18,7 +18,7 @@ class StatusCard extends StatelessWidget {
       ),
       elevation: 10.0,
       child: SizedBox(
-        width: 100.0,
+        width: 130.0,
         height: 70.0,
         child: Padding(
           padding: const EdgeInsets.all(10.0),

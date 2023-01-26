@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'general_theme.dart';
 import 'home.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'screens/screens.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,20 +22,25 @@ class SmartHomeApp extends StatelessWidget {
       title: 'Smart Home Application',
       theme: GeneralTheme.light(),
       debugShowCheckedModeBanner: false,
-      home: FutureBuilder(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => FutureBuilder(
         future: _fbapp,
         builder: (context, snapshot){
           if (snapshot.hasError){
             return const Text("Something went wrong");
           } else if (snapshot.hasData){
-            return const Home();
+            return const LoginScreen();
           } else{
             return const Center(
               child: CircularProgressIndicator(),
             );
           }
         },
-      )
+      ),
+      '/home': (context) => const Home(),
+      '/signup':(context) => const SignUpScreen(),
+      }
     );
   }
 }

@@ -3,3 +3,5 @@ export 'control_card_button.dart';
 export 'image_card.dart';
 export 'status_card.dart';
 export 'microphone_dialog.dart';
+export 'webview.dart';
+export 'searchbar.dart';

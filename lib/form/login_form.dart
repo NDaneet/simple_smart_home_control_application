@@ -28,7 +28,9 @@ class _LoginFormState extends State<LoginForm> {
             )),
         const SizedBox(height: 15.0),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
+          },
           child: const Text("Log In"),
         ),
       ],

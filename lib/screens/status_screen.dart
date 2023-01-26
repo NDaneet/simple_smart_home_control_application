@@ -61,6 +61,7 @@ class _StatusScreenState extends State<StatusScreen> {
       padding: const EdgeInsets.only(left: 10.0, right:10.0, top: 30.0),
       child: Column(
         children: <Widget>[
+          const SizedBox(height: 5.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -71,14 +72,14 @@ class _StatusScreenState extends State<StatusScreen> {
                     .bodyText2
                     ?.copyWith(fontSize: 20.0),
               ),
-              const ThemeSwicthIconButton(),
+              const ThemeSwitchIconButton(),
             ],
           ),
-          const SizedBox(height: 15.0),
+          const SizedBox(height: 10.0),
           Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              "Akubueze Victor \nNwakpu Ozias \nNyorere Daniel",
+              "Nwakpu Ozias \nNyorere Daniel",
               style: Theme.of(context).textTheme.bodyText1,
             ),
           ),
@@ -86,7 +87,7 @@ class _StatusScreenState extends State<StatusScreen> {
           const SizedBox(
             height: 400,
             child: ImageContainer(
-              imageProvider: AssetImage("assets/smart_home.jpeg"),
+              imageProvider: AssetImage("assests/smart_home.jpeg"),
             ),
           ),
           const SizedBox(height: 15),
@@ -100,7 +101,7 @@ class _StatusScreenState extends State<StatusScreen> {
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
                 secondTextValue: Text(
-                  "Temp: $_temperatureText",
+                  "Temp: $_temperatureText\u2103",
                   style: Theme.of(context).textTheme.bodyText2?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),

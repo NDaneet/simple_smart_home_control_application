@@ -22,7 +22,7 @@ class _FanScreenState extends State<FanScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           const ImageContainer(
-            imageProvider: AssetImage("assets/fan_image.jpeg"),
+            imageProvider: AssetImage("assests/fan_image.jpeg"),
           ),
           const SizedBox(height: 20),
           Row(

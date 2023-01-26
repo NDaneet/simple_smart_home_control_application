@@ -1,13 +1,13 @@
 import "Package:flutter/material.dart";
 
-class ThemeSwicthIconButton extends StatefulWidget {
-  const ThemeSwicthIconButton({Key? key}) : super(key: key);
+class ThemeSwitchIconButton extends StatefulWidget {
+  const ThemeSwitchIconButton({Key? key}) : super(key: key);
 
   @override
-  State<ThemeSwicthIconButton> createState() => _ThemeSwicthIconButtonState();
+  State<ThemeSwitchIconButton> createState() => _ThemeSwitchIconButtonState();
 }
 
-class _ThemeSwicthIconButtonState extends State<ThemeSwicthIconButton> {
+class _ThemeSwitchIconButtonState extends State<ThemeSwitchIconButton> {
   bool onClick = false;
   @override
   Widget build(BuildContext context) {

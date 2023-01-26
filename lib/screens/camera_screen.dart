@@ -1,12 +1,39 @@
 import "package:flutter/material.dart";
 import "../components/components.dart";
+import "package:webview_flutter/webview_flutter.dart";
 
-class CameraScreen extends StatelessWidget {
+class CameraScreen extends StatefulWidget {
   const CameraScreen({Key? key}) : super(key: key);
 
   @override
+  State<CameraScreen> createState() => _CameraScreenState();
+}
+
+class _CameraScreenState extends State<CameraScreen> {
+  WebViewController controller = WebViewController();
+
+  @override
+  void initState() {
+    super.initState();
+    controller.loadRequest(
+        Uri.parse("https://flutter.dev"),
+      );
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 20.0, 0, 0),
+      child: 
+       // children:  <Widget>[
+         // SearchBarWidget(controller: controller),
+        //  const SizedBox(height: 5),
+          WebViewApp(controller: controller),
+    );
+  }
+}
+
+/* Container(
       padding: const EdgeInsets.all(10.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -53,6 +80,4 @@ class CameraScreen extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-}
+    );*/ 

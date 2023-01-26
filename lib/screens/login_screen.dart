@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 150,
                 width: 150,
                 child: Image(
-                  image: AssetImage("assets/fuo.png"),
+                  image: AssetImage("assests/fuo.png"),
                 ),
               ),
               const SizedBox(height: 20.0),
@@ -32,7 +32,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20.0,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/signup');
+                },
                 child: const Text("Create Account"),
               )
             ],

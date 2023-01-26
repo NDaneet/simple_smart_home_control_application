@@ -22,7 +22,9 @@ class SignUpScreen extends StatelessWidget {
               style: TextStyle(color: Colors.green[800], fontSize: 17),
             ),
             TextButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pop(context);
+              },
               child: const Text("Login"),
             )
           ],
