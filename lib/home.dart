@@ -2,8 +2,8 @@ import "package:flutter/material.dart";
 import "screens/screens.dart";
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-
+   const Home({Key? key}) : super(key: key);
+    
   @override
   State<Home> createState() => _HomeState();
 }
@@ -11,7 +11,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
-  final List<Widget> _widgetOptions = const <Widget>[
+
+  final List<Widget> _widgetOptions = const  <Widget>[
     StatusScreen(),
     LightScreen(),
     FanScreen(),

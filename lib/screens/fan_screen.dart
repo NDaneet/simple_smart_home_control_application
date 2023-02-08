@@ -54,49 +54,52 @@ class _FanScreenState extends State<FanScreen> {
                 width: 10,
               ),
               ControlCard(
-                  icon: Icon(
-                    Icons.support_rounded,
-                    color: Colors.red[700],
-                  ),
-                  color: Colors.red.withOpacity(0.3),
-                  text: Text(
-                    "OFF",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2
-                        ?.copyWith(color: Colors.black),
-                  ),
-                  onPressed: () async{
+                icon: Icon(
+                  Icons.support_rounded,
+                  color: Colors.red[700],
+                ),
+                color: Colors.red.withOpacity(0.3),
+                text: Text(
+                  "OFF",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      ?.copyWith(color: Colors.black),
+                ),
+                onPressed: () async {
                   try {
                     await _componentsRef.update({'fan': 0});
                     await _alertRef.update({'f_alert': "OFF"});
-                  } catch (e){
+                  } catch (e) {
                     debugPrint('You got an $e');
                   }
-                },),
+                },
+              ),
               const SizedBox(
                 width: 10,
               ),
               ControlCard(
-                  icon: Icon(
-                    Icons.mic_none_rounded,
-                    color: Colors.blue[700],
-                  ),
-                  color: Colors.blue.withOpacity(0.3),
-                  text: Text(
-                    "Voice",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2
-                        ?.copyWith(color: Colors.black),
-                  ),
-                  onPressed: () {
-                    showDialog<void>(
-                        context: context,
-                        builder: (context) {
-                          return const MicrophoneDialog();
-                        });
-                  }),
+                icon: Icon(
+                  Icons.mic_none_rounded,
+                  color: Colors.blue[700],
+                ),
+                color: Colors.blue.withOpacity(0.3),
+                text: Text(
+                  "Voice",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      ?.copyWith(color: Colors.black),
+                ),
+                onPressed: () {
+                  showDialog<void>(
+                    context: context,
+                    builder: (context) {
+                      return const MicrophoneDialog();
+                    },
+                  );
+                },
+              ),
             ],
           )
         ],

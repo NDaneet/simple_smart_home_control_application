@@ -96,12 +96,12 @@ class _StatusScreenState extends State<StatusScreen> {
             children: <Widget>[
               StatusCard(
                 firstTextValue: Text(
-                  "PIR: $_pirText",
+                  "PIR: ${_pirText ?? "Loading..."}",
                   style: Theme.of(context).textTheme.bodyText2?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
                 secondTextValue: Text(
-                  "Temp: $_temperatureText\u2103",
+                  "Temp: ${_temperatureText ?? 0}\u2103",
                   style: Theme.of(context).textTheme.bodyText2?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
@@ -111,12 +111,12 @@ class _StatusScreenState extends State<StatusScreen> {
               ),
               StatusCard(
                 firstTextValue: Text(
-                  "Light: $_lightText",
+                  "Light: ${_lightText?? "Loading..."}",
                   style: Theme.of(context).textTheme.bodyText2?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
                 secondTextValue: Text(
-                  "Fan: $_fanText",
+                  "Fan: ${_fanText ?? "Loading..."}",
                   style: Theme.of(context).textTheme.bodyText2?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),

@@ -7,31 +7,31 @@ class SearchBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double size = MediaQuery.of(context).size.width;
-    return Container(
-        padding: const EdgeInsets.all(3),
-        decoration: BoxDecoration(
-            color: Colors.white,
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.circular(15)),
-        width: size - 10,
-        height: 20,
-        child: Stack(
-          children: <Widget>[
-            const Text("Camera Settings and View"),
-            const SizedBox(width: 5),
-            Positioned(
-              left: size-15,
-              child: IconButton(
-                onPressed: () {
-                  controller.reload();
-                },
-                icon: const Icon(
-                  Icons.refresh,
-                ),
-              ),
-            )
-          ],
-        ));
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        const SizedBox(width: 20),
+        Container(
+          padding: const EdgeInsets.all(3),
+          decoration: BoxDecoration(
+              color: Colors.green[300],
+              shape: BoxShape.rectangle,
+              borderRadius: BorderRadius.circular(15)),
+          width: 200,
+          height: 22,
+          child:  const Text("Camera Settings and View", textAlign: TextAlign.center,),
+        ),
+       IconButton(
+        splashColor: Colors.black12,
+            onPressed: () {
+              controller.reload();
+            },
+            icon: const Icon(
+              Icons.refresh,
+            ),
+          ),
+        
+      ],
+    );
   }
 }
