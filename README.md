@@ -12,7 +12,10 @@ Below are some of the screens.
 ![Splash Screen](assests/splashscreen.png)
 
 ## Login Screen
+![Login Screen](assests/login_sreen.png)
 
 ## Status Screen
+![Status Screen](assests/status_screen.png)
 
 ## Fan Control Screen
+![Fan Control Screen](assests/fan_control.png)
