@@ -8,7 +8,8 @@ The application has a different screens such as the Status screen, Fan control s
 Below are some of the screens.
 
 ## Splash Screen
-![Splash Screen](https://github.com/NDaneet/simple_smart_home_control_application/tree/main/assests/splashscreen.png?raw=true)
+
+![Splash Screen](assests/splashscreen.png)
 
 ## Login Screen
 
