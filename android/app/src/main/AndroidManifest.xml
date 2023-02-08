@@ -7,7 +7,8 @@
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
    <application
         android:label="smart_home_app"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
