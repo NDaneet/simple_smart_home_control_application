@@ -2,20 +2,20 @@ import "package:flutter/material.dart";
 
 class GeneralTheme {
   static TextTheme lightTextTheme = const TextTheme(
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontFamily: "SourceSans",
       fontWeight: FontWeight.w600,
       fontSize: 28.0,
       color: Colors.black,
     ),
     //Decided not to define new style for loginbutton, so i will use copyWith on this bodySmall...NOTE
-    bodyText2: TextStyle(
+    bodyMedium: TextStyle(
       fontFamily: "SourceSans",
       fontWeight: FontWeight.w400,
       fontSize: 16.0,
       color: Colors.black,
     ),
-    subtitle1: TextStyle(
+    titleMedium: TextStyle(
       fontFamily: "SourceSans",
       fontWeight: FontWeight.w200,
       fontSize: 15.0,
@@ -24,19 +24,19 @@ class GeneralTheme {
   );
 
   static TextTheme darkTextTheme = const TextTheme(
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontFamily: "SourceSans",
       fontWeight: FontWeight.w600,
       fontSize: 28.0,
       color: Colors.white,
     ),
-    bodyText2: TextStyle(
+    bodyMedium: TextStyle(
       fontFamily: "SourceSans",
       fontWeight: FontWeight.w400,
       fontSize: 16.0,
       color: Colors.white,
     ),
-    subtitle1: TextStyle(
+    titleMedium: TextStyle(
       fontFamily: "SourceSans",
       fontWeight: FontWeight.w200,
       fontSize: 16.0,
@@ -46,7 +46,6 @@ class GeneralTheme {
 
   static ThemeData light() {
     return ThemeData(
-      backgroundColor: Colors.green[100],
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: Colors.white,
         elevation: 10.0,
@@ -55,7 +54,7 @@ class GeneralTheme {
       ),
       cardColor: Colors.white,
       inputDecorationTheme: InputDecorationTheme(
-          hintStyle: lightTextTheme.subtitle1,
+          hintStyle: lightTextTheme.titleMedium,
           border: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.black, width: 10.0),
             borderRadius: BorderRadius.all(
@@ -67,21 +66,19 @@ class GeneralTheme {
       textTheme: lightTextTheme,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          elevation: 3.0,
-          primary: Colors.green[800],
+          elevation: 3.0, backgroundColor: Colors.green[800],
           //still have issues with the text style and how it is just white instead of dark
           //for the elevated button
-          textStyle: lightTextTheme.bodyText2
+          textStyle: lightTextTheme.bodyMedium
               ?.copyWith(fontWeight: FontWeight.bold, fontSize: 18.0),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          primary: Colors.green[800],
-          textStyle: lightTextTheme.bodyText2
+          foregroundColor: Colors.green[800], textStyle: lightTextTheme.bodyMedium
               ?.copyWith(fontWeight: FontWeight.bold, fontSize: 18.0),
         ),
-      ),
+      ), colorScheme: ColorScheme.fromSeed(seedColor:const Color.fromARGB(255, 2, 120, 33)),
     );
   }
 
@@ -96,7 +93,7 @@ class GeneralTheme {
       ),
       cardColor: Colors.white,
       inputDecorationTheme: InputDecorationTheme(
-        hintStyle: darkTextTheme.subtitle1,
+        hintStyle: darkTextTheme.titleMedium,
         border: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.white, width: 10.0),
           borderRadius: BorderRadius.all(
@@ -109,17 +106,14 @@ class GeneralTheme {
       textTheme: darkTextTheme,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          elevation: 3.0,
-          primary: Colors.green[800],
-          onSurface: Colors.green,
-          textStyle: darkTextTheme.bodyText2?.copyWith(
+          elevation: 3.0, backgroundColor: Colors.green[800], disabledForegroundColor: Colors.green.withOpacity(0.38), disabledBackgroundColor: Colors.green.withOpacity(0.12),
+          textStyle: darkTextTheme.bodyMedium?.copyWith(
               fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.black),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          primary: Colors.green[800],
-          textStyle: darkTextTheme.bodyText2
+          foregroundColor: Colors.green[800], textStyle: darkTextTheme.bodyMedium
               ?.copyWith(fontWeight: FontWeight.bold, fontSize: 18.0),
         ),
       ),

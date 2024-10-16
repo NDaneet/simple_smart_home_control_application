@@ -166,8 +166,7 @@ class _MicrophoneDialogState extends State<MicrophoneDialog> {
                 : OutlinedButton(
                     child: const Text("Try Again"),
                     style: OutlinedButton.styleFrom(
-                      onSurface: Colors.blue,
-                      textStyle: const TextStyle(fontSize: 12),
+                      textStyle: const TextStyle(fontSize: 12), disabledForegroundColor: Colors.blue.withOpacity(0.38),
                     ),
                     onPressed: () {}),
             const SizedBox(

@@ -38,7 +38,7 @@ class _FanScreenState extends State<FanScreen> {
                   "ON",
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2
+                      .bodyMedium
                       ?.copyWith(color: Colors.black),
                 ),
                 onPressed: () async {
@@ -63,7 +63,7 @@ class _FanScreenState extends State<FanScreen> {
                   "OFF",
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2
+                      .bodyMedium
                       ?.copyWith(color: Colors.black),
                 ),
                 onPressed: () async {
@@ -88,7 +88,7 @@ class _FanScreenState extends State<FanScreen> {
                   "Voice",
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2
+                      .bodyMedium
                       ?.copyWith(color: Colors.black),
                 ),
                 onPressed: () {

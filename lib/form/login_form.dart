@@ -13,7 +13,7 @@ class _LoginFormState extends State<LoginForm> {
     return Column(
       children: <Widget>[
         TextFormField(
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
             decoration: const InputDecoration(
               hintText: "Username",
             )),
@@ -22,7 +22,7 @@ class _LoginFormState extends State<LoginForm> {
         ),
         TextFormField(
             obscureText: true,
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
             decoration: const InputDecoration(
               hintText: "Password",
             )),

@@ -36,7 +36,7 @@ class _LightScreenState extends State<LightScreen> {
                   "ON",
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2
+                      .bodyMedium
                       ?.copyWith(color: Colors.black),
                 ),
                 onPressed: ()async{
@@ -61,7 +61,7 @@ class _LightScreenState extends State<LightScreen> {
                   "OFF",
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2
+                      .bodyMedium
                       ?.copyWith(color: Colors.black),
                 ),
                 onPressed: ()async{
@@ -86,7 +86,7 @@ class _LightScreenState extends State<LightScreen> {
                   "Voice",
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2
+                      .bodyMedium
                       ?.copyWith(color: Colors.black),
                 ),
                 onPressed: (){

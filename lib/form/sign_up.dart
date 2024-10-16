@@ -13,14 +13,14 @@ class _SignUpFormState extends State<SignUpForm> {
     return Column(
       children: <Widget>[
         TextFormField(
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
           decoration: const InputDecoration(
             hintText: "Enter your email",
           ),
         ),
         const SizedBox(height: 10.0),
         TextFormField(
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
           decoration: const InputDecoration(
             hintText: "Password",
           ),
@@ -29,7 +29,7 @@ class _SignUpFormState extends State<SignUpForm> {
           height: 10.0,
         ),
         TextFormField(
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
           decoration: const InputDecoration(
             hintText: "Confirm password",
           ),

@@ -69,7 +69,7 @@ class _StatusScreenState extends State<StatusScreen> {
                 "Smart Home Application by",
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText2
+                    .bodyMedium
                     ?.copyWith(fontSize: 20.0),
               ),
               const ThemeSwitchIconButton(),
@@ -80,7 +80,7 @@ class _StatusScreenState extends State<StatusScreen> {
             alignment: Alignment.centerLeft,
             child: Text(
               "Nwakpu Ozias \nNyorere Daniel",
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
           const SizedBox(height: 30.0),
@@ -97,12 +97,12 @@ class _StatusScreenState extends State<StatusScreen> {
               StatusCard(
                 firstTextValue: Text(
                   "PIR: ${_pirText ?? "Loading..."}",
-                  style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
                 secondTextValue: Text(
                   "Temp: ${_temperatureText ?? 0}\u2103",
-                  style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
               ),
@@ -112,12 +112,12 @@ class _StatusScreenState extends State<StatusScreen> {
               StatusCard(
                 firstTextValue: Text(
                   "Light: ${_lightText?? "Loading..."}",
-                  style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
                 secondTextValue: Text(
                   "Fan: ${_fanText ?? "Loading..."}",
-                  style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
               ),

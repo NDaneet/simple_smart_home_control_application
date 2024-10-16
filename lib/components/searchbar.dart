@@ -12,13 +12,14 @@ class SearchBarWidget extends StatelessWidget {
       children: <Widget>[
         const SizedBox(width: 20),
         Container(
+          alignment: Alignment.center,
           padding: const EdgeInsets.all(3),
           decoration: BoxDecoration(
               color: Colors.green[300],
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.circular(15)),
           width: 200,
-          height: 22,
+          height: 40,
           child:  const Text("Camera Settings and View", textAlign: TextAlign.center,),
         ),
        IconButton(
